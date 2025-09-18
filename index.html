@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Morgana Music - Página oficial de música electrónica y rock" />
+  <title>Morgana Music</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d0d0d;
+      color: #f5f5f5;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff007f, #7f00ff);
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .logo {
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff007f;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .cancion {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+    }
+
+    .cancion img {
+      width: 200px;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .cancion h3 {
+      margin: 10px 0;
+    }
+
+    .cancion button {
+      background: #ff007f;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cancion button:hover {
+      background: #cc0066;
+    }
+
+    .player {
+      margin-top: 15px;
+      background: #0f0f0f;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .player h4 {
+      margin-top: 10px;
+      color: #ffd700;
+    }
+
+    .player textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: none;
+      background: #262626;
+      color: white;
+    }
+
+    .player button {
+      margin-top: 5px;
+      background: #7f00ff;
+    }
+
+    #contacto a {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    #redes ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+    }
+
+    #redes a {
+      text-decoration: none;
+      color: #ff007f;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    #redes a:hover {
+      color: #ffd700;
+    }
+
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      border-top: 2px solid #ff007f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="PORTADA.jpg" alt="Logo Morgana Music" class="logo" />
+    <h1>Morgana Music</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#musica">Música</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#redes">Redes Sociales</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Bienvenido a Morgana Music</h2>
+    <p>Explora mi música, escucha todas mis canciones, comenta y dale like a tus favoritas.</p>
+  </section>
+
+  <section id="musica">
+    <h2>Canciones</h2>
+    <div class="cancion">
+      <img src="AQUA.jpg" alt="AQUA" />
+      <h3>AQUA</h3>
+      <button onclick="reproducir('AQUA')">Reproducir</button>
+      <div id="AQUA-player" class="player"></div>
+    </div>
+
+    <div class="cancion">
+      <img src="RESCATAME.jpg" alt="RESCATAME" />
+      <h3>Rescátame</h3>
+      <button onclick="reproducir('Rescatame')">Reproducir</button>
+      <div id="Rescatame-player" class="player"></div>
+    </div>
+
+    <div class="cancion">
+      <img src="ATLANTIS.jpg" alt="ATLANTIS" />
+      <h3>Atlantis</h3>
+      <button onclick="reproducir('Atlantis')">Reproducir</button>
+      <div id="Atlantis-player" class="player"></div>
+    </div>
+
+    <div class="cancion">
+      <img src="DANCEFLOOR.jpg" alt="DANCEFLOOR" />
+      <h3>Dancefloor</h3>
+      <button onclick="reproducir('Dancefloor')">Reproducir</button>
+      <div id="Dancefloor-player" class="player"></div>
+    </div>
+
+    <div class="cancion">
+      <img src="TRANCE.jpg" alt="TRANCE" />
+      <h3>Trance</h3>
+      <button onclick="reproducir('Trance')">Reproducir</button>
+      <div id="Trance-player" class="player"></div>
+    </div>
+
+    <div class="cancion">
+      <img src="CATACLISMO.jpg" alt="CATACLISMO" />
+      <h3>Cataclismo</h3>
+      <button onclick="reproducir('Cataclismo')">Reproducir</button>
+      <div id="Cataclismo-player" class="player"></div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme directamente a mi correo: <a href="mailto:contactomorganastudio@gmail.com">contactomorganastudio@gmail.com</a></p>
+  </section>
+
+  <section id="redes">
+    <h2>Sígueme en mis redes</h2>
+    <ul>
+      <li><a href="https://www.instagram.com/morgana_life_009/" target="_blank">Instagram</a></li>
+      <li><a href="https://tiktok.com/@morgana_life_009" target="_blank">TikTok</a></li>
+      <li><a href="https://x.com/Morgana_life009" target="_blank">X (Twitter)</a></li>
+      <li><a href="https://m.youtube.com/channel/UCFreatqPvmPZnVa25xLSw7g" target="_blank">YouTube</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Morgana Music. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function reproducir(nombre) {
+      const playerDiv = document.getElementById(nombre + '-player');
+      playerDiv.innerHTML = `
+        <audio controls autoplay>
+          <source src="${nombre}.mp3" type="audio/mpeg">
+          Tu navegador no soporta el reproductor de audio.
+        </audio>
+        <div class="info">
+          <h4>${nombre}</h4>
+          <button onclick="like('${nombre}')">👍 Like</button>
+          <div id="${nombre}-likes">0 Likes</div>
+          <div>
+            <textarea placeholder="Escribe un comentario..."></textarea>
+            <button>Comentar</button>
+          </div>
+        </div>`;
+    }
+
+    function like(nombre) {
+      const likesDiv = document.getElementById(nombre + '-likes');
+      let currentLikes = parseInt(likesDiv.innerText);
+      likesDiv.innerText = (currentLikes + 1) + ' Likes';
+    }
+  </script>
+</body>
+</html>
